@@ -16,8 +16,8 @@ const Testimonials = () => (
       </h2>
       <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-          The notable IEEE members below have a lot of good things to say about
-          the value of IEEE membership.
+          The notable ReportWise users below have a lot of good things to say about
+          the value of ReportWise working and how it helped in their life.
         </p>
       </div>
     </div>

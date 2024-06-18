@@ -1,4 +1,4 @@
-import {people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, star  } from "../assets";
+import {people01, people02, people03,facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -48,25 +48,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "IEEE has given me a good chance to improve my management skills. Since my undergraduate degree, I was exposed to many scenarios where I learned valuable lessons including soft skills, networking.",
-    name: "Swati Sharma",
-    title: "Joint Secretary IEEE NSUT",
+      "As a parent, I'm always concerned about what my children might come across online. ReportWise has been a game-changer for us. I've reported several questionable sites, and I can easily hide the content I don't want my kids to see. I feel much more confident letting my kids use the internet now. Thank you, ReportWise!",
+    name: "Swati Arora",
+    title: "Delhi",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "IEEE’s mission 'to foster technological innovation and excellence for the benefit of humanity' challenges us engineers to work towards a better future for the entire global community,",
-    name: "Tarun Kumar Sharma",
-    title: "Chairperson IEEE NSUT",
+      "ReportWise has been an invaluable tool for our family. We encountered some inappropriate content on a popular video site, and thanks to ReportWise, I was able to report and hide it immediately. Knowing I can take action to keep the web safe for my kids gives us great peace of mind.",
+    name: "Rakesh Sharma",
+    title: "Gurugram",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
-      "As a college student, IEEE has been my primary source of networking and connecting with professional for years.IEEE has been a valuable source to stay in touch with other engineers and to build my professional networks.",
-    name: "Devansh Behl",
-    title: "Executive Member",
+      "I'm so grateful for ReportWise! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through ReportWise was easy and effective. It's reassuring to know I can take control of our online safety.",
+    name: "Riya Jain",
+    title: "Noida",
     img: people03,
   },
 ];
@@ -75,20 +75,20 @@ export const chapters = [
   {
     id: "feedback-1",
     content:
-      "Computer Society (CS), is a technical and student chapter from IEEE, it dedicates itself to make progress on the areas related to computing, more information can be seen on Site CS.",
-    name: "CS Chapter",
+      "Copy the URL of the video to be reported.Feed the URL to the URL input box. The video will automatically start to play in display.",
+    name: "Step-1",
   },
   {
     id: "feedback-2",
     content:
-      "IEEE WIE is one of the world’s leaders in changing the face of engineering. Our global network connects over 30,000 members to advance women in technology at all points in their lives and careers.",
-    name: "WIE Affinity Group",
+      "Take video to time where the content to be reported starts, then click on Start button to record startig time and then click on End button to record ending time.",
+    name: "Step-2",
   },
   {
     id: "feedback-3",
     content:
-      "The IEEE Robotics and Automation Society (IEEE RAS) is a professional society of the IEEE that supports the development and the exchange of scientific knowledge in the fields of robotics and automation.",
-    name: "RAS Chapter",
+      "Click on 'Report and Submit' button to push the record to our data.",
+    name: "Step-3",
   },
   // {
   //   id: "feedback-4",
@@ -103,21 +103,21 @@ export const stats = [
   {
     id: "stats-1",
     title: "Videos",
-    value: "100+",
+    value: "1000+",
   },
   {
     id: "stats-2",
-    title: "Awards",
-    value: "10+",
+    title: "Safe content",
+    value: "100+",
   },
+  // {
+  //   id: "stats-3",
+  //   title: "Events",
+  //   value: "50+",
+  // },
   {
     id: "stats-3",
-    title: "Events",
-    value: "50+",
-  },
-  {
-    id: "stats-3",
-    title: "Student Branch",
+    title: "Solution",
     value: "1",
   },
 ];
