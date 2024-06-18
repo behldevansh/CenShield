@@ -1,0 +1,15 @@
+.thumbnail-title{
+    font-size: 1.2rem;
+}
+.thumbnail{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin: 10px;
+}
+.video-thumbnail img{
+    width: 100%;
+}
+.thumb-image{
+    border-radius: 15px;
+}

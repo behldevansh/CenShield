@@ -1,0 +1,59 @@
+.player-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ccc;
+    width: 80vw;
+    height: 70vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.outputUrl{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.outputUrl input{
+    width: 70%;
+    font-size: large;
+    padding: 3px 30px;
+    border-radius: 5px;
+    border: none;
+}
+.d-none{
+    display: none;
+}
+.border-round{
+    border-radius: 15px;
+}
+
+.data-list{
+    padding: 20px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.DB-item:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pg-btn{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: large;
+    border:1px solid #24065C;
+}
+.pg-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    margin-bottom: 10px;
+}
