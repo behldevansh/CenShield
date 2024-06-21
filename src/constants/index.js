@@ -65,7 +65,7 @@ export const feedback = [
     id: "feedback-3",
     content:
       "I'm so grateful for ReportWise! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through ReportWise was easy and effective. It's reassuring to know I can take control of our online safety.",
-    name: "Riya Jain",
+    name: "Rahul Jain",
     title: "Noida",
     img: people03,
   },
@@ -127,41 +127,41 @@ export const footerLinks = [
     title: "Contact Us",
     links: [
       {
-        name: "+91-9534781286",
-        link: "",
+        name: "contact@palanam.com",
+        link: "contact@palanam.com",
       },
       {
-        name: "ieeensut@gmail.com",
-        link: "",
+        name: "https://palanam.com/contact/",
+        link: "https://palanam.com/contact/",
       },
       {
-        name: "NSUT, Sector-3 Dwarka, Delhi",
+        name: "1st Floor, Start-Up Centre NIT Delhi, Plot No. FA7, Zone P1, GT Karnal Rd. Delhi",
         link: "",
       },
     ],
   },
   {
-    title: "Links",
+    title: "",
     links: [
       {
-        name: "NSUT Official Website",
-        link: "http://nsut.ac.in/",
+        name: "",
+        link: "",
       },
       {
-        name: "IEEE Official Website",
-        link: "https://www.ieee.org/about/index.html",
+        name: "",
+        link: "",
       },
       {
-        name: "IEEE Scholarships",
-        link: "https://site.ieee.org/r1-sac/resources/student-scholarships/",
+        name: "",
+        link: "",
       },
       {
-        name: "IEEE Benefits",
-        link: "https://www.ieee.org/membership/benefits/",
+        name: "",
+        link: "",
       },
       {
-        name: "IEEE Global Membership",
-        link: "https://www.ieee.org/membership/join/index.html",
+        name: "",
+        link: "",
       },
     ],
   },

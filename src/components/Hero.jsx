@@ -1,4 +1,3 @@
-//This is the Official IEEE Website for the year 2023
 import styles from "../style";
 import { discount, robot } from "../assets";
 // import GetStarted from "./GetStarted";
@@ -18,7 +17,7 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
             Welcome to <br className="sm:block hidden" />{" "}
-            <span className="text-gradient">ReportWise</span>{" "}
+            <span className="text-gradient">Palanam's</span>{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
             {/* <GetStarted /> */}
@@ -26,7 +25,7 @@ const Hero = () => {
         </div>
 
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-          Official Website
+          Report sensitive Content
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Ensure a safer and cleaner video streaming experience for your children with our advanced content filtering and monitoring solutions.

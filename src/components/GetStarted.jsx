@@ -1,4 +1,3 @@
-//This is the Official IEEE Website for the year 2023
 import styles from "../style";
 import { arrowUp } from "../assets";
 
