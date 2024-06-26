@@ -36,7 +36,7 @@ const App = () => (
         <Stats />
         <Business />
         <Chapters />
-        <Clients />
+        {/* <Clients /> */}
         {/* <PastEvents /> */}
         <Testimonials />
         <CTA />
