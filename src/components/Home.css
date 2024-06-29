@@ -154,8 +154,10 @@ body{
     }
     .timeStamps{
         display: flex;
-        flex-direction: column;
-        gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
     }
     .photo{
         width: 80vw;
