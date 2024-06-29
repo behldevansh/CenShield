@@ -257,7 +257,7 @@ export const Home = () => {
               <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>Please report only the sensitive content as we are mainting a database for every video you submit</li>
               </ul> 
       </div> */}
-      
+{/*       
       <div className="main-display">
       <h1 className="design heading">Steps</h1>
       <div className="card-box">
@@ -283,29 +283,15 @@ export const Home = () => {
           </p>
         </div>
       </div>
-      </div>
-      <div class="platform-info">
-        <h1 class="p1">Currently Platform Support</h1>
-        <p class="p1">
-          <span class="s1">
-            {/* Our app currently supports platforms like Facebook, Youtube, Vimeo,
-            Dailymotion and many more platform support is in progress. */}
-            <div class="images">
-        <div class="photo">
-          <img src={im4} alt="content-1" />
-        </div>
-      </div>
-            
-          </span>
-        </p>
-      </div>
+      </div> */}
 
-      <h2>Please Enter URL Here</h2>
+
+      {/* <h2>Please Enter URL Here</h2> */}
       <div class="aligncenter">
         <input
           type="text"
           className="imgUrlText"
-          placeholder="Video Url"
+          placeholder="Video URL"
           name="url-test"
           onChange={handleLinkChange}
         />
@@ -322,24 +308,23 @@ export const Home = () => {
         />
       </div>
 
-      <div className="timeStamps" >
+      <div className="timestamps">
         <button className="btn-primary" onClick={handlePlay}>
           Start
         </button>
         <button className="btn-primary" onClick={handlePause}>
           Stop
         </button>
-        <br />
         <button className="btn-primary" onClick={dataInput}>
           Submit
         </button>
       </div>
 
-      <div class="platform-info">
+      {/* <div class="platform-info">
         <h2 class="p1">Please report this type of content</h2>
-      </div>
+      </div> */}
 
-      <div class="images">
+      {/* <div class="images">
         <div class="photo">
           <img src={im1} alt="content-1" />
           <h4>Sensitive Content</h4>
@@ -354,7 +339,7 @@ export const Home = () => {
           <img src={im3} alt="content-3" />
           <h4>Explicit Content</h4>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

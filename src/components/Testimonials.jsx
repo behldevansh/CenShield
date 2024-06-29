@@ -1,4 +1,3 @@
-//This is the Official IEEE Website for the year 2023
 import { feedback } from "../constants";
 import styles from "../style";
 import FeedbackCard from "./FeedbackCard";
@@ -16,7 +15,7 @@ const Testimonials = () => (
       </h2>
       <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-          The notable ReportWise users below have a lot of good things to say about
+          The notable users below have a lot of good things to say about
           the value of ReportWise working and how it helped in their life.
         </p>
       </div>

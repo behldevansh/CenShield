@@ -1,18 +1,13 @@
-//This is the Official IEEE Website for the year 2023
 import styles from "./style";
 import {
-  Billing,
   Business,
-  CardDeal,
-  Clients,
   CTA,
   Footer,
   Navbar,
   Stats,
   Testimonials,
   Hero,
-  Chapters,
-  PastEvents,
+  Steps,
   Output,
   Home,
 } from "./components";
@@ -35,9 +30,7 @@ const App = () => (
       <div className={`${styles.boxWidth}`}>
         <Stats />
         <Business />
-        <Chapters />
-        {/* <Clients /> */}
-        {/* <PastEvents /> */}
+        <Steps />
         <Testimonials />
         <CTA />
         <Footer />
