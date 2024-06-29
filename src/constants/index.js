@@ -10,11 +10,11 @@ export const navLinks = [
     title: "What we do?",
   },
   {
-    id: "product",
+    id: "try",
     title: "Try it",
   },
   {
-    id: "clients",
+    id: "Testimonials",
     title: "Testimonials",
   },
 ];
@@ -87,34 +87,21 @@ export const chapters = [
   {
     id: "feedback-3",
     content:
-      "Click on 'Report and Submit' button to push the record to our data.",
+      "Click on 'Report and Submit' button to push the record to our data.Repeat these steps to add as many sections as needed before submitting your report. ",
     name: "Step-3",
   },
-  // {
-  //   id: "feedback-4",
-  //   content:
-  //     "CAS focuses on the theory, analysis, design, and implementation of circuits and systems. The field spans theoretical foundations, applications, and circuits implementations of algorithms for signal processing.",
-  //   name: "CAS Chapter",
-  //   title: "",
-  //   img: people03,
-  // },
 ];
 export const stats = [
   {
     id: "stats-1",
-    title: "Reported Videos",
+    title: " of Unsafe Videos",
+    value: "Billions",
+  },
+  {
+    id: "stats-2",
+    title: "Safe content",
     value: "1000+",
   },
-  // {
-  //   id: "stats-2",
-  //   title: "Safe content",
-  //   value: "100+",
-  // },
-  // {
-  //   id: "stats-3",
-  //   title: "Events",
-  //   value: "50+",
-  // },
   {
     id: "stats-3",
     title: "Solution",

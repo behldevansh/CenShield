@@ -29,11 +29,14 @@
 }
 
 .data-list{
-    padding: 20px;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* display: flex; */
+    justify-content: center;
 }
 .DB-item:hover{
     cursor: pointer;
@@ -47,13 +50,15 @@
 .pg-btn{
     padding: 5px;
     border-radius: 5px;
+    color: white;
     font-size: large;
-    border:1px solid #24065C;
+    border:1px solid white;
 }
 .pg-buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:5px;
+    gap:15px;
+    color: white;
     margin-bottom: 10px;
 }

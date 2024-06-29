@@ -8,6 +8,7 @@ import Hero from "./Hero";
 import Steps from "./Steps";
 import Output from "./Output";
 import { Home } from "./Home";
+import Info from "./Info";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   Steps,
   Output,
   Home,
+  Info,
 };

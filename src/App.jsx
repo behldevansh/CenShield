@@ -10,6 +10,7 @@ import {
   Steps,
   Output,
   Home,
+  Info,
 } from "./components";
 
 const App = () => (
@@ -31,11 +32,12 @@ const App = () => (
         <Stats />
         <Business />
         <Steps />
+        <Home />
+        <Info />
+        <Output />
         <Testimonials />
         <CTA />
         <Footer />
-        <Output />
-        <Home />
       </div>
     </div>
   </div>

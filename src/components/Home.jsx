@@ -1,17 +1,13 @@
 import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import axios from "axios";
-// import getVideoId from "get-video-id";
 import urlParser from "js-video-url-parser";
 import "./Home.css";
 import im1 from "./image-1.png";
 import im2 from "./image-2.png";
 import im3 from "./image-3.jpeg";
 import im4 from "./app-support.png"
-// Import the FontAwesomeIcon component
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import the icons you need
-// import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+
 
 export const Home = () => {
   const [originalUrl, setUrl] = useState("");
@@ -28,17 +24,8 @@ export const Home = () => {
   const handleLinkChange = (e) => {
     //Set URL in text Field and get the youtube ID
     setUrl(e.target.value);
-    // console.log(e.target.value);
-    // setYoutubeId(getVideoId(e.target.value).id);
-    // const idVal = getVideoId(e.target.value).id;
-    // const { service } = getVideoId(e.target.value);
     const provider = urlParser.parse(e.target.value).provider;
     const idVal = urlParser.parse(e.target.value).id;
-    // console.log(idVal, service);
-    // console.log(typeof(service));
-    // console.log(service);
-    // console.log("Provider: " + provider);
-    // console.log("ID: " + provID);
 
     if (provider === "youtube") {
       url_axios = `https://record-timestamps.onrender.com/ytb/timeframes/${idVal}`;
@@ -174,55 +161,6 @@ export const Home = () => {
         } else {
           alert("Invalid Input");
         }
-      // } else if (provider === "twitch") {
-      //   const data = { ...timeSlot, videoId, originalUrl };
-      //   // console.log(data)
-
-      //   if (data.videoId.length === 11) {
-      //     axios
-      //       .post(
-      //         "https://record-timestamps.onrender.com/dmr/inserttimeframes",
-      //         data
-      //       )
-      //       .then((res) => {
-      //         alert(res.data.message);
-      //       });
-      //   } else {
-      //     alert("Invalid Input");
-      //   }
-      // } else if (provider === "facebook") {
-      //   const data = { ...timeSlot, videoId, originalUrl };
-      //   // console.log(data)
-
-      //   if (data.videoId.length === 7) {
-      //     axios
-      //       .post(
-      //         "https://record-timestamps.onrender.com/dmr/inserttimeframes",
-      //         data
-      //       )
-      //       .then((res) => {
-      //         alert(res.data.message);
-      //       });
-      //   } else {
-      //     alert("Invalid Input");
-      //   }
-      // } else if (provider === "soundcloud") {
-      //   const data = { ...timeSlot, videoId, originalUrl };
-      //   // console.log(data)
-
-      //   if (data.videoId.length === 7) {
-      //     axios
-      //       .post(
-      //         "https://record-timestamps.onrender.com/dmr/inserttimeframes",
-      //         data
-      //       )
-      //       .then((res) => {
-      //         alert(res.data.message);
-      //       });
-      //   } else {
-      //     alert("Invalid Input");
-      //   }
-      // } else {
         alert("Wrong Input");
         setUrl("");
       }
@@ -230,62 +168,8 @@ export const Home = () => {
   };
 
   return (
-    
+    <section id="try">
     <div>
-      {/* <div className="descc">
-      <h3 className='text-3xl font-bold text-blue-700 mb-6'>This is a web page where you can report sesitive content, here are some simple steps which you can follow to contribute:-</h3>
-            <div className="description">
-              <div className="description-card">1. Paste the url of the video you want to report sensitive</div>
-              <div className="description-card">2. The video will start playing</div>
-              <div className="description-card">3. You can see the two buttons "Start" & "Stop"</div>
-              <div className="description-card">4. You can simply navigate the video player to the timestamp where the sensitive content starts and press the "Start" button</div>
-              <div className="description-card">5. Now when the sensitive part of the video ends you will press the "Stop" button</div>
-              <div className="description-card">6. At each time you press the buttons an alert will appear which will ask your confirmation, press ok</div>
-              <div className="description-card">7. Like this you can report every sensitive part of the video by using the "Start" & "Stop" button</div>
-              <div className="description-card">8. After you have compeleted the video, do not forget to press the "Submit" button</div>
-              <div className="description-card">9. <br/>Please report only the sensitive content as we are mainting a database for every video you submit</div>
-            </div>
-            {/* <ul className='flex flex-col space-x-5 py-3'>
-              <li className='bg-slate-500 text-white px-4 py-2 rounded-lg shadow-md m-2'>Paste the url of the video you want to report sensitive</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>The video will start playing</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>You can see the two buttons "Start" & "Stop"</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>You can simply navigate the video player to the timestamp where the sensitive content starts and press the "Start" button</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>Now when the sensitive part of the video ends you will press the "Stop" button</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2' >At each time you press the buttons an alert will appear which will ask your confirmation, press ok</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>Like this you can report every sensitive part of the video by using the "Start" & "Stop" button</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>After you have compeleted the video, do not forget to press the "Submit" button</li>
-              <li className='bg-slate-300 text-black px-4 py-2 rounded-lg shadow-md m-2'>Please report only the sensitive content as we are mainting a database for every video you submit</li>
-              </ul> 
-      </div> */}
-{/*       
-      <div className="main-display">
-      <h1 className="design heading">Steps</h1>
-      <div className="card-box">
-        <div className="card design">
-          <p>
-            <h2 style={{color:"#24065C"}}>Step-1</h2>
-            <b style={{color:""}}>Copy the URL of the video to be reported. <i style={{color:"#006769"}}>Feed the URL to the URL input box.</i> The video will automatically start to play in display.  
-            </b>
-            
-          </p>
-        </div>
-        <div className="card design">
-          <p>
-          <h2 style={{color:"#24065C"}}>Step-2</h2>
-            <b>Take video to time where the content to be reported starts, then click on Start button to record startig time and then click on End button to record ending time.</b>
-          </p>
-        </div>
-        <div className="card design">
-          <p>
-          <h2 style={{color:"#24065C"}}>Step-3</h2>
-          <b>Click on <i style={{color:"#006769"}}>"Report and Submit" </i>button to push the record to our data. </b>
-           
-          </p>
-        </div>
-      </div>
-      </div> */}
-
-
       {/* <h2>Please Enter URL Here</h2> */}
       <div class="aligncenter">
         <input
@@ -319,27 +203,7 @@ export const Home = () => {
           Submit
         </button>
       </div>
-
-      {/* <div class="platform-info">
-        <h2 class="p1">Please report this type of content</h2>
-      </div> */}
-
-      {/* <div class="images">
-        <div class="photo">
-          <img src={im1} alt="content-1" />
-          <h4>Sensitive Content</h4>
-        </div>
-
-        <div class="photo">
-          <img src={im2} alt="content-2" />
-          <h4>Sponsored Content</h4>
-        </div>
-
-        <div class="photo">
-          <img src={im3} alt="content-3" />
-          <h4>Explicit Content</h4>
-        </div>
-      </div> */}
     </div>
+    </section>
   );
 };
