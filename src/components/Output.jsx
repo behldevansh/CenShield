@@ -583,7 +583,8 @@ export const Output = () => {
   }, [shouldPlay, timeSlots]);
 
   return (
-    <div>
+    
+    <section id="result">
       <h5>Explore our filtered and safe database</h5>
       <div className="aligncenter d-flex">
         <input
@@ -629,7 +630,7 @@ export const Output = () => {
           +
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -11,6 +11,7 @@ import {
   Output,
   Home,
   Info,
+  Carousel
 } from "./components";
 
 const App = () => (
@@ -32,6 +33,7 @@ const App = () => (
         <Stats />
         <Business />
         <Steps />
+        <Carousel />
         <Home />
         <Info />
         <Output />

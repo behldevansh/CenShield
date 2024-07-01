@@ -9,6 +9,7 @@ import Steps from "./Steps";
 import Output from "./Output";
 import { Home } from "./Home";
 import Info from "./Info";
+import Carousel from "./carousel";
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   Output,
   Home,
   Info,
+  Carousel,
 };
