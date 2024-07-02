@@ -3,10 +3,8 @@ import ReactPlayer from "react-player";
 import axios from "axios";
 import urlParser from "js-video-url-parser";
 import "./Home.css";
-import im1 from "./image-1.png";
-import im2 from "./image-2.png";
-import im3 from "./image-3.jpeg";
-import im4 from "./app-support.png"
+import { placeholder } from "../assets";
+// import ReactPlayer from "react-player";
 
 
 export const Home = () => {
@@ -175,7 +173,7 @@ export const Home = () => {
         <input
           type="text"
           className="imgUrlText"
-          placeholder="Video URL"
+          placeholder="Enter Video URL of above format"
           name="url-test"
           onChange={handleLinkChange}
         />
@@ -189,6 +187,7 @@ export const Home = () => {
           width="100%"
           height="100%"
           playing={true}
+          // placeholder="https://www.youtube.com/watch?v=6n3pFFPSlW4"
         />
       </div>
 
@@ -197,7 +196,7 @@ export const Home = () => {
           Start
         </button>
         <button className="btn-primary" onClick={handlePause}>
-          Stop
+          End
         </button>
         <button className="btn-primary" onClick={dataInput}>
           Submit

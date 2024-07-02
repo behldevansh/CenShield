@@ -127,23 +127,73 @@ body{
 
 .btn-primary {
     text-align: center;
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: 2px solid #24065C;
-    color: #24065C;
-    background-color: #fff;
-    font-size: 20px;
+    padding: 14px 28px; /* Increased padding for more space inside the button */
+    border-radius: 10px; /* Slightly larger border radius for a modern look */
+    border: none; /* Remove border for a cleaner look */
+    color: #fff;
+    background-color: #ff4d4d; /* Red background color */
+    background-image: linear-gradient(to bottom right, #ff4d4d, #e63946); /* Gradient background */
+    font-size: 20px; /* Slightly larger font size for better readability */
     font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
-    transition: 0.25s ease;
-    opacity: 0.75;
-    margin-right: 100px;
-    margin-left: 100px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    outline: none; /* Remove default outline */
+    overflow: hidden; /* Ensure smooth animation */
+    position: relative; /* Position for pseudo elements */
+    margin: 0 120px; /* Increased horizontal margin for more spacing */
+}
+
+/* Shine effect with pseudo-element */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background-color: rgba(255, 255, 255, 0.1); /* White overlay for shine effect */
+    transform: translateX(-75%) translateY(-75%) rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover::before {
+    transform: translateX(-25%) translateY(-25%) rotate(45deg); /* Adjusted shine effect on hover */
 }
 
 .btn-primary:hover {
-    opacity: 1;
+    background-position: right center; /* Adjust gradient position on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Lift the button slightly on hover */
 }
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 4px rgba(255, 77, 77, 0.5); /* Red glow for focus */
+}
+
+.btn-primary span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Add a subtle pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-primary.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+
 @media screen and (max-width: 960px) {
     .card-box{
         flex-direction: column;
@@ -170,5 +220,27 @@ body{
     }
     .platform-info{
         margin: 10em em;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .btn-primary {
+        padding: 12px 24px; /* Reduce padding for smaller screens */
+        font-size: 18px; /* Slightly smaller font size */
+        margin: 0 40px; /* Reduce horizontal margin */
+    }
+
+    .btn-primary::before {
+        width: 200%; /* Adjust shine effect for smaller screens */
+        height: 200%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btn-primary {
+        padding: 10px 20px; /* Further reduce padding for very small screens */
+        font-size: 16px; /* Further reduce font size */
+        margin: 0 20px; /* Further reduce horizontal margin */
     }
 }

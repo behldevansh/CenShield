@@ -7,11 +7,11 @@ export const navLinks = [
   },
   {
     id: "try",
-    title: "Try it",
+    title: "Report Now",
   },
   {
     id: "output",
-    title: "Safe Content",
+    title: "Reported Video Archive",
   },
   {
     id: "Testimonials",
@@ -100,7 +100,7 @@ export const stats = [
   {
     id: "stats-2",
     title: "Safe content",
-    value: "1000+",
+    value: "100+",
   },
   {
     id: "stats-3",
