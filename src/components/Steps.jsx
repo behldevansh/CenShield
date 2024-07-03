@@ -11,11 +11,11 @@ const Steps = () => (
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
       <h2 className={styles.heading2}>
-        How to use our reporting Website ? <br className="sm:block hidden" />
+        How to use SafeFlux ? <br className="sm:block hidden" />
       </h2>
       <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-          Using ReportWise is easy and very starightforward to use . The steps involved are very simple and easy to follow.
+          Using SafeFlux is easy and very starightforward to use . The steps involved are very simple and easy to follow.
         </p>
       </div>
     </div>

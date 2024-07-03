@@ -21,7 +21,15 @@ const Navbar = () => {
                 key={nav.id}
                 className={`font-poppins font-normal cursor-pointer text-[20px] ${
                   active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+                } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} ${
+                  nav.id === "try"
+                    ? "bg-red-500 text-white px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-red-600"
+                    : ""
+                } ${
+                  nav.id === "output"
+                    ? "bg-green-500 text-white px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-green-600"
+                    : ""
+                }`}
                 onClick={() => setActive(nav.title)}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
@@ -49,7 +57,15 @@ const Navbar = () => {
                     key={nav.id}
                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
                       active === nav.title ? "text-white" : "text-dimWhite"
-                    } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                    } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"} ${
+                      nav.id === "try"
+                        ? "bg-red-500 text-white px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-red-600"
+                        : ""
+                    } ${
+                      nav.id === "output"
+                        ? "bg-green-500 text-white px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-green-600"
+                        : ""
+                    }`}
                     onClick={() => setActive(nav.title)}
                   >
                     <a href={`#${nav.id}`}>{nav.title}</a>

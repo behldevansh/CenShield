@@ -48,7 +48,7 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "As a parent, I'm always concerned about what my children might come across online. Palanam has been a game-changer for us. I've reported several questionable videos, and I can easily hide the content I don't want my kids to see. I feel much more confident letting my kids use the internet now. Thank you, Palanam!",
+      "As a parent, I'm always concerned about what my children might come across online. SafeFlux has been a game-changer for us. I've reported several questionable videos, and I can easily hide the content I don't want my kids to see. I feel much more confident letting my kids use the internet now. Thank you, Palanam!",
     name: "Swati Arora",
     title: "Delhi",
     img: people01,
@@ -56,7 +56,7 @@ export const feedback = [
   {
     id: "feedback-2",
     content:
-      "Palanam has been an invaluable tool for our family. We encountered some inappropriate content on a popular video site, and thanks to Palanam, I was able to report and hide it immediately. Knowing I can take action to keep the web safe for my kids gives us great peace of mind.",
+      "SafeFlux has been an invaluable tool for our family. We encountered some inappropriate content on a popular video site, and thanks to Palanam, I was able to report and hide it immediately. Knowing I can take action to keep the web safe for my kids gives us great peace of mind.",
     name: "Rakesh Sharma",
     title: "Gurugram",
     img: people02,
@@ -64,7 +64,7 @@ export const feedback = [
   {
     id: "feedback-3",
     content:
-      "I'm so grateful for Palanam! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through Palanam was easy and effective. It's reassuring to know I can take control of our online safety.",
+      "I'm so grateful for SafeFlux! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through SafeFlux was easy and effective. It's reassuring to know I can take control of our online safety.",
     name: "Rahul Jain",
     title: "Noida",
     img: people03,

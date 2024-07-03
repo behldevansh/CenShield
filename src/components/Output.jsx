@@ -621,15 +621,35 @@ export const Output = () => {
           </div>
         ))}
       </div>
-      <div className="pg-buttons">
-        <button className="pg-btn" onClick={() => setPgNo(pgNo === 1 ? 1 : pgNo - 1)}>
-          -
-        </button>
-        <span>{pgNo}</span>
-        <button className="pg-btn" onClick={() => setPgNo(pgNo + 1)}>
-          +
-        </button>
-      </div>
+      <div className="flex justify-center items-center gap-6 mb-6">
+      <button
+        className="relative w-16 h-16 text-2xl font-semibold rounded-full border border-gray-300 bg-transparent text-white shadow-lg hover:shadow-2xl hover:border-gray-400 transform hover:scale-110 transition-transform duration-300 ease-in-out group"
+        onClick={() => setPgNo(pgNo === 1 ? 1 : pgNo - 1)}
+      >
+        <span className="relative z-10">-</span>
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 opacity-20 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
+        />
+        <span
+          className="absolute inset-0 border border-white rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out"
+        />
+      </button>
+      <span className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300">
+        {pgNo}
+      </span>
+      <button
+        className="relative w-16 h-16 text-2xl font-semibold rounded-full border border-gray-300 bg-transparent text-white shadow-lg hover:shadow-2xl hover:border-gray-400 transform hover:scale-110 transition-transform duration-300 ease-in-out group"
+        onClick={() => setPgNo(pgNo + 1)}
+      >
+        <span className="relative z-10">+</span>
+        <span
+          className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 opacity-20 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
+        />
+        <span
+          className="absolute inset-0 border border-white rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out"
+        />
+      </button>
+    </div>
     </section>
   );
 };
