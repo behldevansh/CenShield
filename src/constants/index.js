@@ -48,7 +48,7 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "As a parent, I'm always concerned about what my children might come across online. SafeFlux has been a game-changer for us. I've reported several questionable videos, and I can easily hide the content I don't want my kids to see. I feel much more confident letting my kids use the internet now. Thank you, Palanam!",
+      "As a parent, I'm always concerned about what my children might come across online. CenShield has been a game-changer for us. I've reported several questionable videos, and I can easily hide the content I don't want my kids to see. I feel much more confident letting my kids use the internet now. Thank you, Palanam!",
     name: "Swati Arora",
     title: "Delhi",
     img: people01,
@@ -56,7 +56,7 @@ export const feedback = [
   {
     id: "feedback-2",
     content:
-      "SafeFlux has been an invaluable tool for our family. We encountered some inappropriate content on a popular video site, and thanks to Palanam, I was able to report and hide it immediately. Knowing I can take action to keep the web safe for my kids gives us great peace of mind.",
+      "CenShield has been an invaluable tool for our family. We encountered some inappropriate content on a popular video site, and thanks to Palanam, I was able to report and hide it immediately. Knowing I can take action to keep the web safe for my kids gives us great peace of mind.",
     name: "Rakesh Sharma",
     title: "Gurugram",
     img: people02,
@@ -64,7 +64,7 @@ export const feedback = [
   {
     id: "feedback-3",
     content:
-      "I'm so grateful for SafeFlux! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through SafeFlux was easy and effective. It's reassuring to know I can take control of our online safety.",
+      "I'm so grateful for CenShield! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through CenShield was easy and effective. It's reassuring to know I can take control of our online safety.",
     name: "Rahul Jain",
     title: "Noida",
     img: people03,
@@ -98,17 +98,39 @@ export const stats = [
     value: "Billions",
   },
   {
-    id: "stats-2",
-    title: "Safe content",
-    value: "100+",
-  },
-  {
     id: "stats-3",
     title: "Solution",
     value: "1",
   },
+  {
+    id: "stats-2",
+    title: "",
+    value: "CenShield",
+  },
 ];
 
+// export const stats = [
+//   {
+//     id: "stats-1",
+//     title: " of Unsafe Videos",
+//     value: "Billions",
+//   },
+//   {
+//     id: "stats-3",
+//     title: "Solution",
+//     value: "1",
+//   },
+//   {
+//     id: "stats-2",
+//     title: "",
+//     value: (
+//       <>
+//         <span className="text-white">Cen</span>
+//         <span className="text-blue-500">Shield</span>
+//       </>
+//     ),
+//   },
+// ];
 export const footerLinks = [
   {
     title: "Contact Us",

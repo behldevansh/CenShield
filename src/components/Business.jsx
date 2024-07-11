@@ -22,7 +22,7 @@ const Business = () =>  (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-      Why use<br className="sm:block hidden" />SafeFlux?
+      Why use<br className="sm:block hidden" />CenShield?
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
       At Palanam, our mission is to ensure a safer and cleaner internet experience for everyone. We provide a platform for reporting and monitoring sensitive content across the web.Join us in our commitment to making the internet a safer place for all.
