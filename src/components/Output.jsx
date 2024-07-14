@@ -1,13 +1,4 @@
 
-// update of 7th May 2024 
-//updates include:
-
-// 1. When a specific timestamp is marked as unsafe, attempting to navigate to that timestamp using the cursor will now automatically redirect the user to the next safe section. This enhancement ensures that unsafe content remains inaccessible, which was not addressed in the previous version.
-
-// 2. The updated functionality prevents users from rewinding or forwarding into an unsafe section. Any attempt to do so will now lead the user directly to the subsequent safe section, reinforcing content safety.
-
-// 3. The previous version had a bug where restarting the video without refreshing the browser would result in the disappearance of the marked unsafe sections. This issue has now been resolved, ensuring consistent enforcement of unsafe content restrictions upon video restart.
-
 import React, { useState, useRef, useEffect } from "react";
 import ReactPlayer from "react-player";
 import axios from "axios";

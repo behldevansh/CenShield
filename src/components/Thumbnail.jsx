@@ -1,5 +1,4 @@
 import React from 'react'
-import img from './OIP.jpg'
 import './Thumbnail.css'
 
 const Thumbnail = (props) => {
@@ -12,9 +11,7 @@ const Thumbnail = (props) => {
         <div className='video-thumbnail'>
             <img src={thumbnailURL} className='thumb-image'/>
         </div>
-        {/* <div className='thumbnail-title'>
-            {props.url}
-        </div> */}
+
     </div>
   )
 }

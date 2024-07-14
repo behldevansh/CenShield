@@ -1,11 +1,10 @@
+
 import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import axios from "axios";
 import urlParser from "js-video-url-parser";
 import "./Home.css";
-import { placeholder } from "../assets";
-// import ReactPlayer from "react-player";
-
+import placeholder from "../assets/nsfw.png"; // Adjust the path as necessary
 
 export const Home = () => {
   const [originalUrl, setUrl] = useState("");
@@ -17,13 +16,24 @@ export const Home = () => {
     endsUpto: 0,
     videoLength: 0,
   });
+  const [showPlaceholder, setShowPlaceholder] = useState(true);
   var url_axios = "";
 
   const handleLinkChange = (e) => {
-    //Set URL in text Field and get the youtube ID
-    setUrl(e.target.value);
-    const provider = urlParser.parse(e.target.value).provider;
-    const idVal = urlParser.parse(e.target.value).id;
+    // Set URL in text Field and get the youtube ID
+    const url = e.target.value;
+    setUrl(url);
+    setShowPlaceholder(!url); // Hide placeholder when URL is entered
+
+    const provider = urlParser.parse(url)?.provider;
+    const idVal = urlParser.parse(url)?.id;
+
+    if (!provider || !idVal) {
+      alert("Wrong Input");
+      setUrl("");
+      setShowPlaceholder(true);
+      return;
+    }
 
     if (provider === "youtube") {
       url_axios = `https://record-timestamps.onrender.com/ytb/timeframes/${idVal}`;
@@ -44,28 +54,21 @@ export const Home = () => {
       url_axios = `https://record-timestamps.onrender.com/twit/timeframes/${idVal}`;
       setvideoId(idVal);
     }
-    else {
-      setUrl("");
-      alert("Wrong Input");
-    }
 
     var intervalId = null;
     axios
       .get(url_axios)
       .then((res) => {
         const times = res.data;
-        // console.log(times);
         if (times.length === 0) {
           alert("No data found");
         } else {
-          var endTimes = []; // Declare endTimes here
+          var endTimes = [];
           var startTimes = [];
           startTimes = times.map((entry) => entry.startFrom);
-          endTimes = times.map((entry) => entry.endsUpto); // Assign to endTimes here
+          endTimes = times.map((entry) => entry.endsUpto);
           startTimes = startTimes.sort((a, b) => a - b);
           endTimes = endTimes.sort((a, b) => a - b);
-          console.log("Start Times:", startTimes);
-          console.log("End Times:", endTimes);
         }
         setTimeSlot({
           ...timeSlot,
@@ -79,27 +82,20 @@ export const Home = () => {
       });
   };
 
-  function handlePlay() {
-    // setPlaying(true);
-    console.log(currentTime);
+  const handlePlay = () => {
     const videoLength = Number(playerRef.current.getDuration().toFixed());
     const startFrom = Number(playerRef.current.getCurrentTime().toFixed());
     setCurrentTime(startFrom);
     setTimeSlot({ ...timeSlot, startFrom, videoLength });
-    // console.log("START TIME:  ", startFrom);
     alert("Start Time: " + startFrom);
-  }
+  };
 
-  function handlePause() {
-    // setPlaying(false);
-    // console.log(currentTime);
+  const handlePause = () => {
     var endsUpto = Number(playerRef.current.getCurrentTime().toFixed());
     setCurrentTime(endsUpto);
     setTimeSlot({ ...timeSlot, endsUpto });
     alert("End Time: " + endsUpto);
-    // console.log("END TIME:  ", endsUpto);
-    // console.log(currentTime);
-  }
+  };
 
   const dataInput = () => {
     const provider = urlParser.parse(originalUrl).provider;
@@ -113,8 +109,6 @@ export const Home = () => {
     } else {
       if (provider === "youtube") {
         const data = { ...timeSlot, videoId, originalUrl };
-        // console.log(data)
-
         if (data.videoId.length === 11) {
           axios
             .post(
@@ -129,8 +123,6 @@ export const Home = () => {
         }
       } else if (provider === "dailymotion") {
         const data = { ...timeSlot, videoId, originalUrl };
-        // console.log(data)
-
         if (data.videoId.length === 7) {
           axios
             .post(
@@ -145,8 +137,6 @@ export const Home = () => {
         }
       } else if (provider === "vimeo") {
         const data = { ...timeSlot, videoId, originalUrl };
-        // console.log(data)
-
         if (data.videoId.length === 9) {
           axios
             .post(
@@ -167,42 +157,43 @@ export const Home = () => {
 
   return (
     <section id="try">
-    <div>
-      {/* <h2>Please Enter URL Here</h2> */}
-      <div class="aligncenter">
-        <input
-          type="text"
-          className="imgUrlText"
-          placeholder="Enter Video URL of above format"
-          name="url-test"
-          onChange={handleLinkChange}
-        />
+      <div>
+        <div className="aligncenter">
+          <input
+            type="text"
+            className="imgUrlText"
+            placeholder="Enter Video URL of above format"
+            name="url-test"
+            onChange={handleLinkChange}
+          />
+        </div>
+        <div className="player-wrapper">
+          {showPlaceholder ? (
+            <img src={placeholder} alt="Placeholder" className="placeholder-img" />
+          ) : (
+            <ReactPlayer
+              ref={playerRef}
+              url={originalUrl}
+              controls={true}
+              width="100%"
+              height="100%"
+              playing={true}
+            />
+          )}
+        </div>
+        <div className="timestamps">
+          <button className="btn-primary" onClick={handlePlay}>
+            Start
+          </button>
+          <button className="btn-primary" onClick={handlePause}>
+            End
+          </button>
+          <button className="btn-primary" onClick={dataInput}>
+            Submit
+          </button>
+        </div>
       </div>
-
-      <div className="player-wrapper">
-        <ReactPlayer
-          ref={playerRef}
-          url={originalUrl}
-          controls={true}
-          width="100%"
-          height="100%"
-          playing={true}
-          // placeholder="https://www.youtube.com/watch?v=6n3pFFPSlW4"
-        />
-      </div>
-
-      <div className="timestamps">
-        <button className="btn-primary" onClick={handlePlay}>
-          Start
-        </button>
-        <button className="btn-primary" onClick={handlePause}>
-          End
-        </button>
-        <button className="btn-primary" onClick={dataInput}>
-          Submit
-        </button>
-      </div>
-    </div>
     </section>
   );
 };
+
