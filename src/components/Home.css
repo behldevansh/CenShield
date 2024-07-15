@@ -1,36 +1,37 @@
-body{
-    background: linear-gradient(90deg,#86642b,#f2ec9d,#86642b);
+body {
+    background: linear-gradient(90deg, #86642b, #f2ec9d, #86642b);
+    font-family: 'Roboto', sans-serif;
 }
-.design{
+
+.design {
     position: relative;
 }
-.heading{
-    /* padding: 0; */
+
+.heading {
     margin-bottom: 0px;
 }
-.design::before{
+
+.design::before {
     content: '';
     width: 100px;
     background-color: #24065C;
     height: 5px;
     position: absolute;
-    top:5px
+    top: 5px;
 }
-.main-display{
-    /* display: flex; */
+
+.main-display {
     text-align: justify;
     padding: 0px 150px 0px 15px;
-    /* background-color: #2406; */
 }
-.card-box{
-    /* background-color: aquamarine; */
+
+.card-box {
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
-    /* grid-template-columns: calc(4, minmax(250px,300px)); */
 }
-.card{
-    /* background-color: aquamarine; */
+
+.card {
     width: 250px;
     padding: 20px;
     font-size: 1.3rem;
@@ -46,7 +47,7 @@ body{
 .imgUrlText {
     width: 70%;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid white;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
@@ -58,48 +59,53 @@ body{
     margin-top: 20px;
 }
 
-.p1{
-    padding-bottom: 15px;
-}
-.platform-info {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* width: 100%; */
-    /* width: -webkit-max-content; */
-    /* width: -moz-max-content; */
-    /* width: max-content; */
-    max-width: 800px;
-    font-size: 12px;
-    margin:auto;
-    /* background: #EFEFEF; */
-    /* border: 1px solid rgba(0, 0, 0, .1); */
-    padding: 0.5rem;
-    /* border-radius: 15px; */
-    margin-bottom: -60px;
-    margin-top: 0px;
+.imgUrlText.error {
+    background-color: red;
+    color: white;
+    border-color: red;
 }
 
-.images {
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: 0 50px;
-    padding: 30px;
+.error-placeholder {
+    background-color: red;
+    color: white;
 }
 
-.photo {
-    border: 1.5px solid #000;
-    max-width: 100%;
-    width: 450px;
-    padding: 0 10px;
-    height: 250px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    margin-left: 15px;
+.tooltip {
+    display: inline-block;
+    position: relative;
 }
 
-.photo img {
-    width: 100%;
-    height: 100%;
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 .player-wrapper {
@@ -126,7 +132,6 @@ body{
 }
 
 .timestamps {
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -134,24 +139,23 @@ body{
 
 .btn-primary {
     text-align: center;
-    padding: 14px 28px; /* Increased padding for more space inside the button */
-    border-radius: 10px; /* Slightly larger border radius for a modern look */
-    border: none; /* Remove border for a cleaner look */
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: none;
     color: #fff;
-    background-color: #ff4d4d; /* Red background color */
-    background-image: linear-gradient(to bottom right, #ff4d4d, #e63946); /* Gradient background */
-    font-size: 20px; /* Slightly larger font size for better readability */
+    background-color: #ff4d4d;
+    background-image: linear-gradient(to bottom right, #ff4d4d, #e63946);
+    font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
-    outline: none; /* Remove default outline */
-    overflow: hidden; /* Ensure smooth animation */
-    position: relative; /* Position for pseudo elements */
-    margin: 0 120px; /* Increased horizontal margin for more spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    margin: 0 120px;
 }
 
-/* Shine effect with pseudo-element */
 .btn-primary::before {
     content: '';
     position: absolute;
@@ -159,23 +163,23 @@ body{
     left: 0;
     width: 150%;
     height: 150%;
-    background-color: rgba(255, 255, 255, 0.1); /* White overlay for shine effect */
+    background-color: rgba(255, 255, 255, 0.1);
     transform: translateX(-75%) translateY(-75%) rotate(45deg);
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover::before {
-    transform: translateX(-25%) translateY(-25%) rotate(45deg); /* Adjusted shine effect on hover */
+    transform: translateX(-25%) translateY(-25%) rotate(45deg);
 }
 
 .btn-primary:hover {
-    background-position: right center; /* Adjust gradient position on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-    transform: translateY(-2px); /* Lift the button slightly on hover */
+    background-position: right center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .btn-primary:focus {
-    box-shadow: 0 0 0 4px rgba(255, 77, 77, 0.5); /* Red glow for focus */
+    box-shadow: 0 0 0 4px rgba(255, 77, 77, 0.5);
 }
 
 .btn-primary span {
@@ -183,7 +187,6 @@ body{
     z-index: 1;
 }
 
-/* Optional: Add a subtle pulse animation */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -200,54 +203,63 @@ body{
     animation: pulse 2s infinite ease-in-out;
 }
 
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
 
 @media screen and (max-width: 960px) {
-    .card-box{
+    .card-box {
         flex-direction: column;
     }
-    .player-wrapper{
+
+    .player-wrapper {
         height: 20vh;
         width: 80vw;
     }
-    .timeStamps{
+
+    .timeStamps {
         display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin-top: 20px;
     }
-    .photo{
+
+    .photo {
         width: 80vw;
         height: 30vh;
     }
-    .images{
+
+    .images {
         justify-content: center;
         margin: 0;
         padding: 0;
     }
-    .platform-info{
+
+    .platform-info {
         margin: 10em em;
     }
 }
 
-
 @media screen and (max-width: 960px) {
     .btn-primary {
-        padding: 12px 24px; /* Reduce padding for smaller screens */
-        font-size: 18px; /* Slightly smaller font size */
-        margin: 0 40px; /* Reduce horizontal margin */
+        padding: 12px 24px;
+        font-size: 18px;
+        margin: 0 40px;
     }
 
     .btn-primary::before {
-        width: 200%; /* Adjust shine effect for smaller screens */
+        width: 200%;
         height: 200%;
     }
 }
 
 @media screen and (max-width: 600px) {
     .btn-primary {
-        padding: 10px 20px; /* Further reduce padding for very small screens */
-        font-size: 16px; /* Further reduce font size */
-        margin: 0 20px; /* Further reduce horizontal margin */
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 20px;
     }
 }

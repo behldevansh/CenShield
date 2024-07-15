@@ -1,4 +1,4 @@
-import {people01, people02, people03,facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, star  } from "../assets";
+import {facebook, instagram, linkedin, twitter,star  } from "../assets";
 
 export const navLinks = [
   {
@@ -51,7 +51,7 @@ export const feedback = [
       "As a parent, I'm always concerned about what my children might come across online. CenShield has been a game-changer for us. I've reported several questionable videos, and I can easily hide the content I don't want my kids to see. I feel much more confident letting my kids use the internet now. Thank you, Palanam!",
     name: "Swati Arora",
     title: "Delhi",
-    img: people01,
+    // img: people01,
   },
   {
     id: "feedback-2",
@@ -59,7 +59,7 @@ export const feedback = [
       "CenShield has been an invaluable tool for our family. We encountered some inappropriate content on a popular video site, and thanks to Palanam, I was able to report and hide it immediately. Knowing I can take action to keep the web safe for my kids gives us great peace of mind.",
     name: "Rakesh Sharma",
     title: "Gurugram",
-    img: people02,
+    // img: people02,
   },
   {
     id: "feedback-3",
@@ -67,7 +67,7 @@ export const feedback = [
       "I'm so grateful for CenShield! My teenager stumbled upon some disturbing content, and I didn't know where to turn. Reporting and hiding it through CenShield was easy and effective. It's reassuring to know I can take control of our online safety.",
     name: "Rahul Jain",
     title: "Noida",
-    img: people03,
+    // img: people03,
   },
 ];
 
@@ -109,28 +109,6 @@ export const stats = [
   },
 ];
 
-// export const stats = [
-//   {
-//     id: "stats-1",
-//     title: " of Unsafe Videos",
-//     value: "Billions",
-//   },
-//   {
-//     id: "stats-3",
-//     title: "Solution",
-//     value: "1",
-//   },
-//   {
-//     id: "stats-2",
-//     title: "",
-//     value: (
-//       <>
-//         <span className="text-white">Cen</span>
-//         <span className="text-blue-500">Shield</span>
-//       </>
-//     ),
-//   },
-// ];
 export const footerLinks = [
   {
     title: "Contact Us",
@@ -188,18 +166,18 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    // logo: airbnb,
   },
   {
     id: "client-2",
-    logo: binance,
+    // logo: binance,
   },
   {
     id: "client-3",
-    logo: coinbase,
+    // logo: coinbase,
   },
   {
     id: "client-4",
-    logo: dropbox,
+    // logo: dropbox,
   },
 ];

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import axios from "axios";
@@ -8,6 +7,7 @@ import placeholder from "../assets/nsfw.png"; // Adjust the path as necessary
 
 export const Home = () => {
   const [originalUrl, setUrl] = useState("");
+  const [error, setError] = useState(false); // State variable for error status
   const playerRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [videoId, setvideoId] = useState();
@@ -20,9 +20,10 @@ export const Home = () => {
   var url_axios = "";
 
   const handleLinkChange = (e) => {
-    // Set URL in text Field and get the youtube ID
+    // Set URL in text field and get the YouTube ID
     const url = e.target.value;
     setUrl(url);
+    setError(false); // Clear error status when URL changes
     setShowPlaceholder(!url); // Hide placeholder when URL is entered
 
     const provider = urlParser.parse(url)?.provider;
@@ -55,7 +56,6 @@ export const Home = () => {
       setvideoId(idVal);
     }
 
-    var intervalId = null;
     axios
       .get(url_axios)
       .then((res) => {
@@ -83,6 +83,11 @@ export const Home = () => {
   };
 
   const handlePlay = () => {
+    if (!originalUrl) {
+      setError(true);
+      return;
+    }
+
     const videoLength = Number(playerRef.current.getDuration().toFixed());
     const startFrom = Number(playerRef.current.getCurrentTime().toFixed());
     setCurrentTime(startFrom);
@@ -91,6 +96,11 @@ export const Home = () => {
   };
 
   const handlePause = () => {
+    if (!originalUrl) {
+      setError(true);
+      return;
+    }
+
     var endsUpto = Number(playerRef.current.getCurrentTime().toFixed());
     setCurrentTime(endsUpto);
     setTimeSlot({ ...timeSlot, endsUpto });
@@ -98,6 +108,11 @@ export const Home = () => {
   };
 
   const dataInput = () => {
+    if (!originalUrl) {
+      setError(true);
+      return;
+    }
+
     const provider = urlParser.parse(originalUrl).provider;
     if (
       timeSlot.startFrom > timeSlot.endsUpto ||
@@ -161,10 +176,11 @@ export const Home = () => {
         <div className="aligncenter">
           <input
             type="text"
-            className="imgUrlText"
-            placeholder="Enter Video URL of above format"
+            className={`imgUrlText ${error ? "error" : ""}`}
+            placeholder={error ? "Error: Enter Video URL of above format" : "Enter Video URL of above format"}
             name="url-test"
             onChange={handleLinkChange}
+            style={{ backgroundColor: error ? "red" : "" }} // Inline style for background color
           />
         </div>
         <div className="player-wrapper">
@@ -196,4 +212,3 @@ export const Home = () => {
     </section>
   );
 };
-
