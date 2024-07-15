@@ -115,7 +115,7 @@ export const footerLinks = [
     links: [
       {
         name: "contact@palanam.com",
-        link: "contact@palanam.com",
+        link: "mailto:contact@palanam.com",
       },
       {
         name: "https://palanam.com/contact/",
@@ -123,36 +123,10 @@ export const footerLinks = [
       },
       {
         name: "1st Floor, Start-Up Centre NIT Delhi, Plot No. FA7, Zone P1, GT Karnal Rd. Delhi",
-        link: "",
+        link: "https://maps.app.goo.gl/8Dgkq9osdDNnjVp48",
       },
     ],
   },
-  {
-    title: "",
-    links: [
-      {
-        name: "",
-        link: "",
-      },
-      {
-        name: "",
-        link: "",
-      },
-      {
-        name: "",
-        link: "",
-      },
-      {
-        name: "",
-        link: "",
-      },
-      {
-        name: "",
-        link: "",
-      },
-    ],
-  },
-  
 ];
 
 export const socialMedia = [

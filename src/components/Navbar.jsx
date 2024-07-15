@@ -6,11 +6,23 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
+  const scrollToHome = () => {
+    const homeSection = document.getElementById("home");
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="w-full pt-20"> {/* Changed here */}
+    <div className="w-full pt-20">
       <nav className="w-full flex py-6 px-5 justify-between items-center fixed top-0 z-50 bg-grey bg-opacity-80 backdrop-blur-lg">
         {/* Logo */}
-        <img src={logo} alt="logo" className="w-[220px] h-[60px]" />
+        <img
+          src={logo}
+          alt="logo"
+          className="w-[220px] h-[60px] cursor-pointer"
+          onClick={scrollToHome} // Added onClick handler
+        />
 
         {/* Navigation Links for Desktop */}
         <ul className="list-none hidden sm:flex justify-end items-center ">
